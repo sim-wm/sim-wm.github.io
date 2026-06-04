@@ -9,7 +9,7 @@
     --line: #e4e0d8;
     --paper: #ffffff;
     --paper-2: #f6f6f4;
-    --measure: 920px;
+    --measure: 1280px;
 }
 
 * {
@@ -168,7 +168,7 @@ p {
     pointer-events: none;
 }
 
-/* small "+" registration ticks at grid crossings, sim-viewport style */
+/* small registration ticks at grid crossings, sim-viewport style */
 .title-text::after {
     content: '';
     position: absolute;
@@ -250,13 +250,8 @@ p {
     padding-bottom: 40px;
 }
 
-
 .section h2 {
     padding-left: 0;
-}
-
-.section h2::before {
-    display: none;
 }
 
 .section ul {
@@ -314,10 +309,6 @@ th {
 tbody tr {
     background: none;
     transition: background 0.15s;
-}
-
-tbody tr:nth-child(even) {
-    background: none;
 }
 
 tbody tr:hover {
