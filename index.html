@@ -29,11 +29,11 @@
   <div class="title-container">
     <div style="text-align: center;" class="title-text">
       <div style="width: 90%; margin: auto; z-index: 2; position: relative;">
-        <div class="subtitle">Workshop at [Venue]</div>
+        <div class="subtitle">Workshop at NeurIPS 2026</div>
         <h2><b>Simulation and World Models for Embodied AI</b></h2>
         <div class="subtitle" style="margin: 20px;">
-          Workshop Subtitle<br>
-          Date, Location
+          December 6&ndash;12, 2026<br>
+          Sydney, Australia
         </div>
       </div>
     </div>
@@ -43,8 +43,30 @@
     <div class="section" id="intro">
       <h2>Introduction</h2>
       <p>
-        Workshop introduction text goes here.
+        Robotics is bottlenecked by real-world data; learned world models are emerging as a scalable alternative to physical data collection. Recent progress in generative modeling and self-supervised learning has unlocked the ability to train robot policies from diverse, non-robot data sources like internet video, human demonstrations, and synthetic trajectories, dramatically expanding the effective training distribution. Concurrently, advances in simulation fidelity have made synthetic experience an increasingly viable medium for robot policy training at scale.
       </p>
+      <p>
+        Foundation models have reached the capability threshold where grounding them in physical interaction is the next frontier, sim-to-real transfer is achieving results that were out of reach just two years ago, and the community is coalescing around shared architectures and benchmarks for the first time. This workshop brings together researchers at the intersection of generative modeling, world models, and robot learning to consolidate recent progress, identify open problems, and chart a path toward scalable, data-efficient robot learning.
+      </p>
+
+      <h3>Topics of Interest</h3>
+      <ul>
+        <li>
+          <strong>Learning World Models for Robotics.</strong> Architectures and methods for learning predictive models of robot environments, including contact-rich manipulation, locomotion, and navigation. Topics include latent and pixel-space dynamics models, scaling behavior of video-based world models, and approaches that ground predictions in physical plausibility.
+        </li>
+        <li>
+          <strong>Neural &amp; Hybrid Simulators.</strong> Learned simulators that serve as training environments for robot policies, including purely neural approaches and hybrid models that combine data-driven components with analytical physics priors. Topics include differentiable simulation through learned models, compositional scene representations, and tradeoffs between simulation fidelity and computational cost.
+        </li>
+        <li>
+          <strong>Training from Non-Robot Data.</strong> Methods that leverage data sources beyond direct robot experience, including internet video, human demonstrations, and synthetically generated trajectories, to learn representations, dynamics, or policies. This includes vision-language-action models and foundation models that transfer broad visual and semantic knowledge to embodied settings, as well as work that addresses the embodiment gap between heterogeneous data sources and target robot platforms.
+        </li>
+        <li>
+          <strong>Sim-to-Real Transfer.</strong> Work demonstrating successful transfer of policies, representations, or dynamics models from simulation, learned or physics-based, to real-world robot deployment. This includes domain adaptation, residual dynamics learning, and uncertainty-aware policy transfer, as well as systematic analyses of what aspects of the reality gap matter most for downstream performance.
+        </li>
+        <li>
+          <strong>Evaluation &amp; Benchmarking.</strong> Simulation and learned world models as platforms for evaluating embodied AI systems, including VLAs and generalist robot policies at scale. Also covers metrics and protocols for assessing world model quality itself and their relationship to downstream policy performance.
+        </li>
+      </ul>
     </div>
 
     <div class="section" id="call">
@@ -134,9 +156,39 @@
       <h2>Invited Speakers</h2>
       <div class="people">
         <a href="#">
-          <img src="./static/images/placeholder.jpg">
-          <div>Speaker Name</div>
-          <div class="aff">Affiliation</div>
+          <img src="./static/images/rbalestr.jpg">
+          <div>Randall Balestriero</div>
+          <div class="aff">Brown University</div>
+        </a>
+        <a href="#">
+          <img src="./static/images/edward.jpg">
+          <div>Edward Johns</div>
+          <div class="aff">Imperial College London</div>
+        </a>
+        <a href="#">
+          <img src="./static/images/joel.png">
+          <div>Joel Jang</div>
+          <div class="aff">NVIDIA</div>
+        </a>
+        <a href="#">
+          <img src="./static/images/karl.png">
+          <div>Karl Pertsch</div>
+          <div class="aff">Physical Intelligence</div>
+        </a>
+        <a href="#">
+          <img src="./static/images/hao.jpeg">
+          <div>Hao Su</div>
+          <div class="aff">UC San Diego</div>
+        </a>
+        <a href="#">
+          <img src="./static/images/katerina.jpg">
+          <div>Katerina Fragkiadaki</div>
+          <div class="aff">Carnegie Mellon University</div>
+        </a>
+        <a href="#">
+          <img src="./static/images/sherry.jpeg">
+          <div>Sherry Yang</div>
+          <div class="aff">NYU / Google DeepMind</div>
         </a>
       </div>
     </div>
