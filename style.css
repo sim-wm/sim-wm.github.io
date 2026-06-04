@@ -74,12 +74,8 @@ p {
 /* ---------- Nav ---------- */
 .nav {
     width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: rgba(255, 255, 255, 0.88);
-    backdrop-filter: saturate(180%) blur(10px);
-    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    position: static;
+    background: #fff;
     border-bottom: 1px solid var(--line);
 }
 
@@ -150,7 +146,7 @@ p {
     margin: 0;
     border-bottom: 1px solid var(--line);
     box-shadow: none;
-    padding: 76px 24px 64px;
+    padding: 44px 24px 38px;
 }
 
 /* faint simulation / blueprint grid behind the hero */
@@ -193,10 +189,10 @@ p {
 .title-text h2 {
     color: var(--ink);
     font-family: Newsreader, Georgia, serif;
-    font-size: 3.4em;
+    font-size: 2.5em;
     font-weight: 500;
-    margin: 0.28em 0 0.34em;
-    line-height: 1.08;
+    margin: 0.2em 0 0.28em;
+    line-height: 1.1;
     letter-spacing: -0.015em;
     text-shadow: none;
 }
@@ -229,8 +225,8 @@ p {
 }
 
 .title-text .subtitle:last-child {
-    margin-top: 22px !important;
-    padding-top: 22px;
+    margin-top: 16px !important;
+    padding-top: 16px;
     border-top: 1px solid var(--line);
     display: inline-block;
     letter-spacing: 0.04em;
@@ -244,8 +240,6 @@ p {
 }
 
 .section {
-    margin-top: -110px;
-    padding-top: 110px;
     margin-bottom: 8px;
     padding-bottom: 40px;
 }

@@ -18,8 +18,8 @@
   <div class="nav">
     <div class="nav-container">
       <a href="index.html#">Home</a>
-      <a href="index.html#speakers">Speakers</a>
       <a href="index.html#intro">Introduction</a>
+      <a href="index.html#speakers">Speakers</a>
       <a href="index.html#call">Call for Papers</a>
       <a href="index.html#schedule">Schedule</a>
       <a href="index.html#organizers">Organizers</a>
@@ -40,6 +40,16 @@
   </div>
 
   <div class="container">
+    <div class="section" id="intro">
+      <h2>Introduction</h2>
+      <p>
+        Robotics is bottlenecked by real-world data; learned world models are emerging as a scalable alternative to physical data collection. Recent progress in generative modeling and self-supervised learning has unlocked the ability to train robot policies from diverse, non-robot data sources like internet video, human demonstrations, and synthetic trajectories, dramatically expanding the effective training distribution. Concurrently, advances in simulation fidelity have made synthetic experience an increasingly viable medium for robot policy training at scale.
+      </p>
+      <p>
+        Foundation models have reached the capability threshold where grounding them in physical interaction is the next frontier, sim-to-real transfer is achieving results that were out of reach just two years ago, and the community is coalescing around shared architectures and benchmarks for the first time. This workshop brings together researchers at the intersection of generative modeling, world models, and robot learning to consolidate recent progress, identify open problems, and chart a path toward scalable, data-efficient robot learning.
+      </p>
+    </div>
+
     <div class="section" id="speakers">
       <h2>Invited Speakers</h2>
       <div class="people">
@@ -81,16 +91,8 @@
       </div>
     </div>
 
-    <div class="section" id="intro">
-      <h2>Introduction</h2>
-      <p>
-        Robotics is bottlenecked by real-world data; learned world models are emerging as a scalable alternative to physical data collection. Recent progress in generative modeling and self-supervised learning has unlocked the ability to train robot policies from diverse, non-robot data sources like internet video, human demonstrations, and synthetic trajectories, dramatically expanding the effective training distribution. Concurrently, advances in simulation fidelity have made synthetic experience an increasingly viable medium for robot policy training at scale.
-      </p>
-      <p>
-        Foundation models have reached the capability threshold where grounding them in physical interaction is the next frontier, sim-to-real transfer is achieving results that were out of reach just two years ago, and the community is coalescing around shared architectures and benchmarks for the first time. This workshop brings together researchers at the intersection of generative modeling, world models, and robot learning to consolidate recent progress, identify open problems, and chart a path toward scalable, data-efficient robot learning.
-      </p>
-
-      <h3>Topics of Interest</h3>
+    <div class="section" id="topics">
+      <h2>Topics of Interest</h2>
       <ul>
         <li>
           <strong>Learning World Models for Robotics.</strong> Architectures and methods for learning predictive models of robot environments, including contact-rich manipulation, locomotion, and navigation. Topics include latent and pixel-space dynamics models, scaling behavior of video-based world models, and approaches that ground predictions in physical plausibility.
@@ -268,7 +270,7 @@
           <div class="aff">University of Washington</div>
         </a>
         <a href="#">
-          <img src="./static/images/placeholder.jpg">
+          <img src="./static/images/wilbert.png">
           <div>Wilbert Pumacay</div>
           <div class="aff">Allen Institute for AI</div>
         </a>
