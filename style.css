@@ -139,7 +139,7 @@ p {
 }
 
 .title-text {
-    background: linear-gradient(var(--paper), var(--paper-2));
+    background: linear-gradient(180deg, #eef4fc 0%, #f4f8fd 60%, #ffffff 100%);
     color: var(--ink);
     width: 100%;
     max-width: 100%;
@@ -153,8 +153,33 @@ p {
     padding: 76px 24px 64px;
 }
 
+/* faint simulation / blueprint grid behind the hero */
 .title-text::before {
-    display: none;
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-image:
+        linear-gradient(to right, rgba(43, 96, 168, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(43, 96, 168, 0.08) 1px, transparent 1px);
+    background-size: 34px 34px;
+    -webkit-mask-image: radial-gradient(120% 100% at 50% 40%, #000 0%, rgba(0, 0, 0, 0.35) 55%, transparent 85%);
+    mask-image: radial-gradient(120% 100% at 50% 40%, #000 0%, rgba(0, 0, 0, 0.35) 55%, transparent 85%);
+    pointer-events: none;
+}
+
+/* small "+" registration ticks at grid crossings, sim-viewport style */
+.title-text::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-image: radial-gradient(rgba(43, 96, 168, 0.22) 1.4px, transparent 1.6px);
+    background-size: 102px 102px;
+    background-position: 17px 17px;
+    -webkit-mask-image: radial-gradient(120% 100% at 50% 40%, #000 0%, transparent 80%);
+    mask-image: radial-gradient(120% 100% at 50% 40%, #000 0%, transparent 80%);
+    pointer-events: none;
 }
 
 .title-text > div {
@@ -315,8 +340,11 @@ tbody tr:last-child td {
 }
 
 .tg td:first-child {
+    font-family: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
     font-variant-numeric: tabular-nums;
+    font-size: 0.86em;
     font-weight: 500;
+    letter-spacing: -0.02em;
     color: var(--accent);
     white-space: nowrap;
     width: 150px;
