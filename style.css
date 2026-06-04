@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-    --accent: #4f46e5;
-    --accent-dark: #3730a3;
-    --accent-soft: #eef2ff;
-    --ink: #1a1a2e;
-    --muted: #5b6172;
-    --line: #e6e8ef;
-    --bg: #ffffff;
-    --bg-alt: #f7f8fc;
-    --radius: 16px;
-    --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 8px 24px rgba(16, 24, 40, 0.06);
+    --ink: #1b1a17;
+    --body: #36342f;
+    --muted: #76726a;
+    --accent: #7a2e2e;          /* restrained oxblood */
+    --accent-soft: #f4ebe8;
+    --line: #e4e0d8;
+    --paper: #ffffff;
+    --paper-2: #f6f6f4;
+    --measure: 920px;
 }
 
 * {
@@ -26,13 +25,14 @@ body {
     padding: 0;
     font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-weight: 400;
-    font-size: 17px;
-    line-height: 1.65;
-    color: var(--ink);
-    background-color: var(--bg);
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--body);
+    background-color: var(--paper);
     width: 100%;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 a {
@@ -42,268 +42,289 @@ a {
 }
 
 a:hover {
-    color: var(--accent-dark);
+    color: var(--ink);
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: Inter, sans-serif;
+    font-family: Newsreader, Georgia, "Times New Roman", serif;
     color: var(--ink);
     padding: 0;
     margin: 0;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-}
-
-h1 {
-    font-size: 3em;
-    font-weight: 800;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.005em;
 }
 
 h2 {
-    font-size: 1.9em;
-    font-weight: 700;
-    margin-bottom: 0.6em;
+    font-size: 2.1em;
+    margin-bottom: 0.5em;
 }
 
 h3 {
-    font-size: 1.25em;
+    font-size: 1.35em;
     font-weight: 600;
-    margin-top: 1.6em;
-    margin-bottom: 0.6em;
+    margin-top: 1.8em;
+    margin-bottom: 0.5em;
 }
 
 p {
-    color: var(--muted);
-    margin: 0 0 1.1em;
-}
-
-.subtitle {
-    font-size: 1.2em;
-    font-weight: 400;
+    margin: 0 0 1.2em;
 }
 
 /* ---------- Nav ---------- */
 .nav {
     width: 100%;
-    font-size: 1em;
     position: sticky;
     top: 0;
     z-index: 10;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: saturate(180%) blur(12px);
-    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: saturate(180%) blur(10px);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
     border-bottom: 1px solid var(--line);
 }
 
 .nav-container {
-    max-width: 1150px;
+    max-width: var(--measure);
     margin: auto;
-    padding: 14px 20px;
+    padding: 16px 24px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 4px;
 }
 
 .nav a {
     display: block;
-    transition: all 0.2s;
     color: var(--muted);
+    font-size: 0.74em;
     font-weight: 500;
-    margin: 4px 4px;
-    padding: 6px 14px;
-    border-radius: 999px;
-    text-decoration: none;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 2px 0;
+    padding: 6px 16px;
     white-space: nowrap;
+    position: relative;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 0;
+    height: 1px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
 }
 
 .nav a:hover {
-    color: var(--accent);
-    background: var(--accent-soft);
+    color: var(--ink);
+}
+
+.nav a:hover::after {
+    transform: scaleX(1);
 }
 
 /* ---------- Hero ---------- */
 .title-container {
     width: 100%;
     margin: auto;
-    padding: 30px 20px 10px;
-    color: white;
+    padding: 0;
+    color: var(--ink);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .title-text {
-    color: #ffffff;
-    background: radial-gradient(120% 140% at 0% 0%, #6366f1 0%, #4338ca 40%, #1e1b4b 100%);
+    background: linear-gradient(var(--paper), var(--paper-2));
+    color: var(--ink);
     width: 100%;
-    max-width: 1150px;
-    min-height: 360px;
+    max-width: 100%;
+    min-height: auto;
     position: relative;
-    border-radius: 28px;
-    overflow: hidden;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 20px 50px rgba(49, 46, 129, 0.35);
+    border-radius: 0;
+    overflow: visible;
+    margin: 0;
+    border-bottom: 1px solid var(--line);
+    box-shadow: none;
+    padding: 76px 24px 64px;
 }
 
-/* subtle grid + glow texture over the gradient */
 .title-text::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-        radial-gradient(60% 80% at 80% 10%, rgba(255, 255, 255, 0.18), transparent 60%),
-        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-    background-size: auto, 38px 38px, 38px 38px;
-    z-index: 1;
+    display: none;
 }
 
 .title-text > div {
     position: relative;
     z-index: 2;
-    padding: 40px;
+    max-width: var(--measure);
+    margin: auto;
+    padding: 0;
 }
 
 .title-text h2 {
-    color: #ffffff;
-    font-size: 2.6em;
-    font-weight: 800;
-    margin: 18px 0;
-    line-height: 1.15;
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    color: var(--ink);
+    font-family: Newsreader, Georgia, serif;
+    font-size: 3.4em;
+    font-weight: 500;
+    margin: 0.28em 0 0.34em;
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    text-shadow: none;
 }
 
-.title-text .subtitle {
-    color: rgba(255, 255, 255, 0.92);
+.title-text h2 b {
     font-weight: 500;
 }
 
+/* eyebrow: "Workshop at NeurIPS 2026" */
 .title-text .subtitle:first-child {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    padding: 6px 16px;
-    border-radius: 999px;
-    font-size: 0.95em;
-    letter-spacing: 0.02em;
-    backdrop-filter: blur(4px);
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--accent);
+    font-family: Inter, sans-serif;
+    font-size: 0.72em;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+/* date / location line */
+.title-text .subtitle {
+    color: var(--muted);
+    font-family: Inter, sans-serif;
+    font-size: 1.02em;
+    font-weight: 400;
+    margin: 0 !important;
+}
+
+.title-text .subtitle:last-child {
+    margin-top: 22px !important;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    display: inline-block;
+    letter-spacing: 0.04em;
 }
 
 /* ---------- Layout ---------- */
 .container {
     margin: auto;
-    max-width: 1150px;
-    padding: 40px 20px 60px;
+    max-width: var(--measure);
+    padding: 56px 24px 40px;
 }
 
 .section {
-    margin-top: -120px;
-    padding-top: 120px;
-    margin-bottom: 28px;
-    padding-bottom: 28px;
-    border-bottom: 1px solid var(--line);
+    margin-top: -110px;
+    padding-top: 110px;
+    margin-bottom: 8px;
+    padding-bottom: 40px;
 }
 
-.section:last-of-type {
-    border-bottom: none;
-}
 
 .section h2 {
-    position: relative;
-    padding-left: 16px;
+    padding-left: 0;
 }
 
 .section h2::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.12em;
-    bottom: 0.12em;
-    width: 5px;
-    border-radius: 999px;
-    background: linear-gradient(var(--accent), var(--accent-dark));
+    display: none;
 }
 
 .section ul {
-    padding-left: 1.2em;
+    padding-left: 1.3em;
+    margin: 0.4em 0 1.2em;
 }
 
 .section li {
-    color: var(--muted);
-    margin-bottom: 0.7em;
+    margin-bottom: 0.85em;
+    padding-left: 0.25em;
+}
+
+.section li::marker {
+    color: var(--accent);
 }
 
 .section li strong {
     color: var(--ink);
+    font-weight: 600;
 }
 
 /* ---------- Tables ---------- */
 table {
     border-spacing: 0;
     width: 100%;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    margin: 0.5em 0 1.5em;
+    border: none;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    border-radius: 0;
+    overflow: visible;
+    box-shadow: none;
+    margin: 1em 0 1.8em;
+    font-size: 0.96em;
 }
 
 td, th {
     border: none;
     border-bottom: 1px solid var(--line);
-    padding: 12px 16px;
+    padding: 13px 12px;
     text-align: left;
+    vertical-align: top;
 }
 
 th {
-    background: var(--ink);
-    color: #fff;
+    background: none;
+    color: var(--muted);
+    font-family: Inter, sans-serif;
     font-weight: 600;
-    font-size: 0.9em;
-    letter-spacing: 0.03em;
+    font-size: 0.72em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-}
-
-tbody tr:last-child td {
-    border-bottom: none;
+    border-bottom: 1px solid var(--ink);
 }
 
 tbody tr {
-    background: #fff;
+    background: none;
     transition: background 0.15s;
 }
 
 tbody tr:nth-child(even) {
-    background: var(--bg-alt);
+    background: none;
 }
 
 tbody tr:hover {
     background: var(--accent-soft);
 }
 
-/* schedule table overrides (legacy .tg classes) */
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* schedule table (legacy .tg classes) */
 .tg th.tg-u4qn {
-    background: var(--ink) !important;
+    background: none !important;
+    border-bottom: 1px solid var(--ink);
 }
 
 .tg th.tg-u4qn span {
     background: transparent !important;
-    color: #fff;
+    color: var(--muted);
 }
 
 .tg td:first-child {
     font-variant-numeric: tabular-nums;
-    font-weight: 600;
-    color: var(--accent-dark);
+    font-weight: 500;
+    color: var(--accent);
     white-space: nowrap;
+    width: 150px;
 }
 
 .tg-za14 {
     width: auto;
+    color: var(--body);
 }
 
 /* ---------- People (speakers / organizers) ---------- */
@@ -311,68 +332,77 @@ tbody tr:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 14px 8px;
     text-align: center;
-    margin-top: 0.5em;
+    margin-top: 1em;
 }
 
 .people > * {
     display: block;
-    width: 160px;
-    padding: 22px 12px 18px;
-    border-radius: var(--radius);
+    width: 150px;
+    padding: 10px 8px;
+    border-radius: 12px;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    transition: transform 0.2s ease;
 }
 
 .people > *:hover {
-    transform: translateY(-4px);
-    background: #fff;
-    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+    background: none;
+    box-shadow: none;
 }
 
 .people > * > div:not(.aff) {
+    font-family: Newsreader, Georgia, serif;
+    font-size: 1.08em;
     font-weight: 600;
     margin-top: 12px;
     color: var(--ink);
+    line-height: 1.25;
 }
 
 .people img {
-    width: 118px;
-    height: 118px;
+    width: 116px;
+    height: 116px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #fff;
-    box-shadow: 0 4px 14px rgba(16, 24, 40, 0.12);
-    transition: border-color 0.2s;
+    border: 1px solid var(--line);
+    box-shadow: none;
+    transition: border-color 0.2s ease;
 }
 
 .people > *:hover img {
-    border-color: var(--accent-soft);
+    border-color: var(--accent);
 }
 
 .people .aff {
-    font-size: 0.82em;
+    font-family: Newsreader, Georgia, serif;
+    font-style: italic;
+    font-size: 0.92em;
     color: var(--muted);
-    margin-top: 2px;
+    margin-top: 3px;
+    line-height: 1.35;
 }
 
 /* ---------- Footer ---------- */
 .foot {
-    background: var(--ink);
-    padding: 22px 8%;
+    background: none;
+    border-top: 1px solid var(--line);
+    padding: 32px 24px 48px;
     text-align: center;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.95em;
+    color: var(--muted);
+    font-size: 0.92em;
+    max-width: var(--measure);
+    margin: 0 auto;
 }
 
 .foot a {
-    color: #c7d2fe;
+    color: var(--accent);
 }
 
 .foot a:hover {
-    color: #fff;
+    color: var(--ink);
 }
 
 #reviewers ul {
@@ -387,19 +417,13 @@ tbody tr:hover {
         font-size: 16px;
     }
     h2 {
-        font-size: 1.5em;
-    }
-    .title-text h2 {
-        font-size: 1.8em;
+        font-size: 1.7em;
     }
     .title-text {
-        min-height: 300px;
+        padding: 52px 22px 44px;
     }
-    .title-text > div {
-        padding: 24px;
-    }
-    .nav {
-        font-size: 0.95em;
+    .title-text h2 {
+        font-size: 2.2em;
     }
     .people {
         justify-content: center;
