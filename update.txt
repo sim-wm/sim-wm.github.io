@@ -1,0 +1,108 @@
+Submissions for workshop organization should be no more than three pages of proposal, plus no more than two pages of organizer information, and unlimited references. The reviewers are not obligated to read anything beyond those. To simplify proposal preparation, we strongly recommend using this template as a foundation for every proposal.
+The three pages (or fewer) for the main proposal must include:
+A title and a description of the workshop topic and content. Details and importance, freshness, and its relevance for the community (e.g., which audiences will benefit from this workshop, which new avenues or outstanding problems it will tackle, etc.)
+Specify if any author has submitted concurrently a related proposal to other venues and/or is submitting other (related or not) workshop proposals to NeurIPS 2026. 
+Location preference in the order from most preferred to least preferred, i.e.,
+Sydney, Atlanta, Paris (or any other preferred order)
+Paris only (Atlanta only, Sydney only)
+Atlanta or Sydney (or any other preferred combination)
+Any
+(Please note we cannot guarantee venue preference; Paris and Atlanta can host 9-13 workshops per day, while Sydney can host considerably more/larger)
+A list of invited speakers, if applicable, with an indication of which ones have already agreed and which ones are tentative.
+Details of the demographic diversity of the organizers and speakers. Also, an account of any efforts to include diverse participants (e.g., via mentoring, subsidies, or the wording and topics in the call for proposals).
+An estimate of the number of attendees.
+If the workshop has been held before, a mandatory note specifying how many submissions the workshop received, how many papers were accepted (extended abstract/long format), and how many attendees the workshop attracted.
+A description of special requirements and technical needs.
+How your workshop will differ from any recent similar workshops in the same/other conferences and previous iterations of the same workshop (if applicable)
+A very brief advertisement or tagline for the workshop, up to 140 characters, that highlights key information prospective attendees should know.
+Optionally, a URL for the workshop website.
+ 
+The two pages (or fewer) for information about organizers must include:
+The names, affiliations, and email addresses of the organizers, with one-paragraph statements of their research interests, areas of expertise, and experience in organizing workshops and related events. Please highlight how the organizers’ profiles can make the proposed workshop successful. Please also indicate any other workshops (if any) that an organizer is proposing concurrently. 
+A list of Program Committee members, with an indication of which members have already agreed. Organizers should do their best to estimate the number of submissions (especially for recurring workshops) in order to (a) ensure a sufficient number of reviewers so that each paper receives 3 reviews, and (b) anticipate that no one is committed to reviewing more than 3 papers. This practice is likely to ensure on-time, more comprehensive, and thoughtful reviews.
+
+
+
+Workshop Title: Simulation and World Models for Embodied AI
+Workshop Tagline: World models vs. simulation: what to learn from which data 
+Workshop Website: sim-wm.github.io
+Workshop Description: 
+Robotics is bottlenecked by real-world data; learned world models are emerging as a scalable alternative to physical data collection. Recent progress in generative modeling and self-supervised learning have unlocked the ability to train robot policies from diverse, non-robot data sources like internet video, human demonstrations, and synthetic trajectories, dramatically expanding the effective training distribution. Concurrently, advances in simulation fidelity have made synthetic experience an increasingly viable medium for robot policy training at scale.
+Foundation models have reached the capability threshold where grounding them in physical interaction is the next frontier, sim-to-real transfer is achieving results that were out of reach just two years ago, and the community is coalescing around shared architectures and benchmarks for the first time. This workshop brings together researchers at the intersection of generative modeling, world models, and robot learning to consolidate recent progress, identify open problems, and chart a path toward scalable, data-efficient robot learning.
+Topics of Interest:
+Learning World Models for Robotics. Architectures and methods for learning predictive models of robot environments, including contact-rich manipulation, locomotion, and navigation. Topics include latent and pixel-space dynamics models, scaling behavior of video-based world models, and approaches that ground predictions in physical plausibility.
+Neural & Hybrid Simulators. Learned simulators that serve as training environments for robot policies, including purely neural approaches and hybrid models that combine data-driven components with analytical physics priors. Topics include differentiable simulation through learned models, compositional scene representations, and tradeoffs between simulation fidelity and computational cost.
+Training from Non-Robot Data. Methods that leverage data sources beyond direct robot experience,including internet video, human demonstrations, and synthetically generated trajectories, to learn representations, dynamics, or policies. This includes vision-language-action models and foundation models that transfer broad visual and semantic knowledge to embodied settings, as well as work that addresses the embodiment gap between heterogeneous data sources and target robot platforms.
+Sim-to-Real Transfer. Work demonstrating successful transfer of policies, representations, or dynamics models from simulation, learned or physics-based, to real-world robot deployment. This includes domain adaptation, residual dynamics learning, and uncertainty-aware policy transfer, as well as systematic analyses of what aspects of the reality gap matter most for downstream performance.
+Evaluation & Benchmarking. Simulation and learned world models as platforms for evaluating embodied AI systems, including VLAs and generalist robot policies at scale. Also covers metrics and protocols for assessing world model quality itself and their relationship to downstream policy performance.
+Location Preference: Sydney → Paris → Atlanta
+Invited Speakers:
+Randall Balestriero
+Edward Johns
+Joel Jang
+Karl Pertsch
+Hao Su
+Katerina Fragkiadaki
+Sherry Yang
+Diversity: 
+Our invited speakers span a range of institutional affiliations, career stages, and research communities.
+Geographic: The speaker lineup includes researchers based in the US (Brown, CMU, NYU, NVIDIA, Pi), the UK (Imperial College London), and China (Fudan University), with two speakers participating remotely to reduce barriers to international participation. 
+Institutional: Speakers are drawn from both academia, start-up, and established industry companies, including Physical Intelligence and NVIDIA's GEAR Lab, reflecting the workshop's intent to bridge fundamental research and applied deployment.
+Career Stage: the group spans early-career researchers (Randall Balestriero, Joel Jang) through mid-career faculty and senior researchers (Edward Johns, Katerina Fragkiadaki, Sherry Yang, Karl Pertsch, Hao Su), providing a range of perspectives on the field's trajectory.
+
+Gender: two of seven confirmed speakers are women (Katerina Fragkiadaki, Sherry Yang). We are committed to gender balance in our reviewer pool and program committee, and will include explicit encouragement for submissions from researchers from underrepresented groups in our call for papers.
+
+Our organizing team reflects a broad range of backgrounds, career stages, and institutional affiliations. The team spans multiple career stages, from predoctoral researchers to first-year PhD students to PhD candidates and a research scientist, ensuring a balance of emerging and established perspectives in the field. Organizers are affiliated with a diverse set of institutions, including the Allen Institute for AI (Ai2), UCLA, Princeton University, the University of Washington, representing both academic and research institute environments. The team also reflects geographic and demographic diversity, with members from varied cultural and national backgrounds. Gender diversity is represented across the group, with both women and men in leadership roles. 
+
+Related Work:
+Embodied World Models for Decision Making: A NeurIPS 2025 workshop bringing together researchers across generative modeling, RL, and robotics to advance world models for embodied decision-making and planning. Our workshop builds on this by fostering more direct dialogue between the simulation and world model communities, motivating multiple complementary streams of synthetic data sources rather than treating world models in isolation.
+Robot Learning Workshop Series: A recurring workshop covering the broad landscape of robot learning, from perception and representation to manipulation and generalization. Our workshop takes a more focused lens, directly addressing the data scaling bottleneck and centering the conversation around learned simulators and non-robot data sources as a concrete path forward.
+Scaling Environments for Agents: A workshop motivated by the same core observation that environment scale is a critical bottleneck for learning capable agents. Our robotics-specific framing provides a more grounded conversation around this challenge, with emphasis on physical plausibility, sim-to-real transfer, and the practical requirements of deploying policies on real hardware.
+World Models: Understanding, Modelling, and Scaling: A broad workshop spanning world model architectures, scaling, and applications across domains from robotics to the natural sciences. Our workshop invites this same research community into direct engagement with simulation engineers and practitioners, with an explicit focus on the applications and evaluation of world models for embodied AI.
+Logistical Considerations: 
+We have no specific special requirements or technical needs beyond those that are standard. The table below reflects a tentative schedule:
+09:00 - 09:10
+Introduction and welcome
+09:10 - 09:45
+Invited speaker: 1
+09:45 - 10:20
+Invited speaker: 2
+10:20 - 10:55
+Invited speaker: 3
+10:55 - 11:10
+Coffee break (Poster Session)
+11:10 - 11:45
+Invited speaker: 4
+11:45 - 12:30
+Invited speaker: 5
+12:30 - 13:30
+Lunch
+13:30-14:00
+Coffee break (Poster session)
+14:00 - 14:45
+Spotlight Presentation: (10mins each + buffer)
+14:45 - 15:20
+Invited speaker: 6
+15:20 - 15:55
+Invited speaker: 7
+15:55 - 16:30
+Panel Discussion
+16:30 - 17:00 
+Award ceremony and closing remark
+
+
+
+List of Organizers and Program Committee Members:
+
+Maya Guru (Ai2; email: mayag@allenai.org) is a predoctoral researcher at Ai2. Her research focuses on scaling up robotic manipulation capabilities through data-driven approaches that improve robot generalization, robustness, and adaptability in whole-body manipulation across new and unseen environments. Her recent works include MolmoBot (SDRL @ ICRA 2026) and MolmoSpaces (RSS 2026), which both use simulation as a platform for robust evaluation and data generation for robotic foundation models. Previously, she received her MS from the University of Pennsylvania in robotics at the GRASP Lab and worked at the RAI institute. She has organized a workshop at CVPR and served as a reviewer for ICRA workshops.
+
+Omar Rayyan (UCLA; email: orayyan@cs.ucla.edu) is a first-year PhD student at UCLA. His research focuses on cross-embodiment learning and using large-scale simulation to develop and improve generalist manipulation policies. His recent work includes MV-UMI and CAP, which explore scalable approaches to cross-embodiment learning, as well as MolmoSpaces and MolmoBot, which together provide a large-scale simulation ecosystem for training and evaluating robot policies with strong sim-to-real transfer. His research has been published at RSS and ICRA, and he has previously helped organize a workshop at RSS. 
+
+Abhay Deshpande (Princeton, Ai2; email: ad4217@princeton.edu)  is an incoming PhD student at Princeton University. His research focuses on developing data-driven methods and systems towards generalist manipulation policies that can operate effectively in the wild. His recent works leverage procedural simulation at scale to train models with strong generalization capabilities and zero-shot sim-to-real transfer, including MolmoBot (a VLA trained entirely on simulated data that transfers zero-shot to the real world and outperforms SOTA VLAs trained on real data, won Best Paper at SDRL @ ICRA2026), MolmoSpaces (a large-scale platform and benchmark for diverse simulation environments and tasks), and GraspMolmo (a generalist task-oriented grasping model trained via procedural generation). These works, among his others, have been published at major conferences including RSS, CoRL, ICLR, and IROS. He has also served as a reviewer for CoRL as well as ICRA workshops. 
+
+Ainaz Eftekhar (UW, Ai2; email: ainazeft@cs.washington.edu) is a Ph.D. candidate in Computer Science & Engineering at the University of Washington and a student researcher at Allen Institute for AI. Her research sits at the intersection of embodied AI, robotics, and vision-language-action modeling, with a focus on building generalist robot policies that scale across embodiments and tasks. Her work spans robotic foundation models and embodied learning, including MolmoBot (a foundation manipulation policy trained entirely in simulation with zero-shot sim-to-real transfer), The One RING (an embodiment-agnostic generalist navigation policy) and MolmoSpaces (a large-scale, fully open platform for studying embodied learning). She has organized related workshops, including RSS 2025 and ECCV 2026, and has served as a reviewer for major conferences including CVPR, CoRL, and NeurIPS.
+
+
+Max Argus (Ai2, UW; email: maxa@allenai.org) is a research scientist at Ai2. His research focuses on vision based robot learning. His recent work includes scaling simulated data for training robot manipulation models as well as learning motion prediction world models from videos. Previous work explored approaches ranging from few-shot robot imitation systems that are able to learn from human demonstrations, explainable AI, reinforcement learning and hand pose estimation.  Previously, he received his PhD from the University of Freiburg.
+
+Wilbert Pumacay (Ai2, UCSP; email: wilbert.pumacay@ucsp.edu.pe) is a Predoctoral Researcher at the Allen Institute for AI. He received his BEng. in Mechatronics from Universidad Nacional de Ingenieria (Peru) and did his MSc. in Computer Science at Universidad Catolica San Pablo (Peru). His research focuses on simulation for robotics. His most recent work MolmoSpaces (@ RSS2026) provides a fully open source simulation framework for robotics and embodied AI. Some other works include Colosseum (@ RSS 2024) a benchmark to test generalization for robotics, Sam2Act-MemoryBench (@ ICML 2025), a benchmark for testing memory capabilities for robotics policies, and AHA (@ ICRL 2025), a model trained to detect failure cases of robot policies in manipulation tasks. These works among others have been published at major conferences including RSS, CoRL and ICRA. He also served as a reviewer for a CoRL workshop, and organized a workshop and challenge at CVPR.
